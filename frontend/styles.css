@@ -1,0 +1,385 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(126, 179, 192);
+    background-image: url(back1.png);
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    
+}
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 180px; 
+    height: auto;
+    display: inline;
+    margin: 0 auto;
+}
+
+.logo-container h1 {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    margin-top: 8px;
+}
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding-bottom: 50px;
+}
+
+h2 {
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #0073b1; /* LinkedIn primary color */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    margin-right: 8px;
+}
+
+button:hover {
+    background-color: #005582; 
+}
+/* Side bar  */
+.sidebar { 
+    width: 240px;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    height: 100%; 
+    padding: 25px;
+    background-color: rgb(255, 255, 255);
+    border-right: 1px solid #070707;
+    line-break: normal;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; 
+    font-family: 'Roboto', sans-serif; 
+    overflow-y: auto; 
+}
+.sidebar h3 {
+    margin-bottom: 20px; 
+    font-weight: 700; 
+    color: #333; 
+}
+
+.sidebar a {
+    display: block; 
+    padding: 10px 15px; 
+    margin-bottom: 10px; 
+    text-decoration: none; 
+    color: #0073e6; 
+    border-radius: 5px; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.sidebar a:hover {
+    background-color: #e9f1fe; 
+    color: #0056b3; 
+}
+/* profile and update profile section  */
+#main-content {
+    margin-left: 430px; 
+    margin-right: auto; 
+    margin-top: 20px; 
+    padding: 20px;
+    font-family: 'Roboto', sans-serif; 
+    max-width: 800px; 
+    background-color: rgba(176, 197, 207, 0.815); 
+    border-radius: 8px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+#main-content h2 {
+    color: #333; 
+    margin-bottom: 15px; 
+}
+
+.profile-section, .update-profile-section {
+    background-color: #ffffff; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+    padding: 20px; 
+    margin-bottom: 20px; 
+}
+
+.profile-section p, .update-profile-section label {
+    margin-bottom: 10px; 
+    color: #555; 
+}
+
+.profile-section span, .update-profile-section input {
+    display: block; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+.profile-section input:focus, .update-profile-section input:focus {
+    border-color: #0073e6; 
+    outline: none; 
+}
+
+button {
+    background-color: #0073e6; 
+    color: white; 
+    border: none; 
+    border-radius: 4px; 
+    padding: 10px 15px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+button:hover {
+    background-color: #0056b3; 
+}
+
+.section {
+    margin-top: 20px;
+}
+/* post form Section  */
+.post-form {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    padding: 20px; 
+    border-radius: 8px; 
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    width: 93%;
+}
+
+.post-form textarea {
+    width: 100%; 
+    height: 100px; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box;
+    margin-bottom: 15px; 
+    font-size: 16px; 
+    resize: none; /* Prevent resizing */
+}
+.post-form input[type="file"] {
+    margin-bottom: 15px;
+}
+
+.post-form button {
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.post-form button:hover {
+    background-color: #0056b3;
+}
+
+.upload-button {
+    margin-top: 10px;
+    background-color: #28a745;
+}
+
+.upload-button:hover {
+    background-color: #218838;
+}
+
+.section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.post-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.post {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    transition: box-shadow 0.3s;
+    width: 95%;
+}
+
+.post:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.post h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    color: #0073e6;
+}
+
+.post p {
+    margin: 0;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.post .post-media {
+    margin-top: 10px;
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.post .post-actions {
+    margin-top: 10px;
+}
+
+.post button {
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin-right: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.post button:hover {
+    background-color: #0056b3;
+}
+
+.post-container {
+    margin-top: 10px;
+}
+
+#chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; 
+    cursor: pointer;
+    z-index: 1000; 
+}
+
+#chat-icon img {
+    width: 65px; 
+    height: auto;
+}
+
+#chat-container {
+    position: fixed;
+    bottom: 80px; 
+    right: 20px; 
+    width: 240px; 
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 20px;
+}
+
+#room-section {
+    margin-bottom: 15px;
+}
+
+#room-input {
+    width: calc(100% - 110px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#join-button {
+    padding: 10px 15px;
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#join-button:hover {
+    background-color: #0056b3;
+}
+
+#message-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+#messages {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#message-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+#send-button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 30%;
+}
+
+#send-button:hover {
+    background-color: #218838;
+}
+
+#typing-indicator {
+    font-style: italic;
+    color: gray;
+    margin-top: 5px;
+}

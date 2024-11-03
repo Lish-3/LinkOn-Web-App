@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkOn</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+   
+    <!-- Login Section -->
+    <div class="container" id="login-section">
+        <div class="logo-container">
+            <img src="logos.png" alt="LinkOn Logo" class="logo">
+        </div>
+        <h2>Login</h2>
+        <div id="login-form">
+            <label for="login-username">Username</label>
+            <input type="text" id="login-username" placeholder="Enter username" required>
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" placeholder="Enter password" required>
+            <button id="login-btn">Login</button>
+            <button onclick="showSignup()">Sign Up</button>
+            <button onclick="showForgotPassword()">Forgot Password?</button>
+            <div class="message" id="login-message"></div>
+        </div>
+    </div>
+
+    <!-- Signup Section -->
+    <div class="container" id="signup-section" style="display: none;">
+        <div class="logo-container">
+            <img src="logos.png" alt="LinkOn Logo" class="logo">
+        </div>
+        <h2>Sign Up</h2>
+        <label for="signup-username">Username</label>
+        <input type="text" id="signup-username" placeholder="Enter username" required>
+        <label for="signup-email">Email</label>
+        <input type="email" id="signup-email" placeholder="Enter email" required>
+        <label for="signup-password">Password</label>
+        <input type="password" id="signup-password" placeholder="Enter password" required>
+        <button id="signup-btn">Sign Up</button>
+        <button onclick="showLogin()">Back to Login</button>
+        <div class="message" id="signup-message"></div>
+    </div>
+
+    <!-- Forgot Password Section -->
+    <div class="container" id="forgot-password-section" style="display: none;">
+        <div class="logo-container">
+            <img src="logos.png" alt="LinkOn Logo" class="logo">
+        </div>
+        <h2>Forgot Password</h2>
+        <label for="forgot-email">Email</label>
+        <input type="email" id="forgot-email" placeholder="Enter your email" required>
+        <button id="forgot-btn">Send OTP</button>
+        <button onclick="showLogin()">Back to Login</button>
+        <div class="message" id="forgot-message"></div>
+    </div>
+
+    <!-- Reset Password Section -->
+    <div class="container" id="reset-password-section" style="display: none;">
+        <div class="logo-container">
+            <img src="logos.png" alt="LinkOn Logo" class="logo">
+        </div>
+        <h2>Reset Password</h2>
+        <label for="otp">OTP</label>
+        <input type="text" id="otp" placeholder="Enter the OTP" required>
+        <label for="new-password">New Password</label>
+        <input type="password" id="new-password" placeholder="Enter new password" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <button id="reset-btn">Reset Password</button>
+        <button onclick="showLogin()">Back to Login</button>
+        <div class="message" id="reset-message"></div>
+    </div>
+
+    <!-- Dashboard Section -->
+    <div id="dashboard" style="display: none;">
+        <div class="sidebar">
+            <div class="logo-container">
+                <img src="logos.png" alt="LinkOn Logo" class="logo">
+            </div>
+            <h3>Settings</h3>
+            <a href="#" onclick="showSection('profile-section')">Profile</a>
+            <a href="#" onclick="showSection('update-profile-section')">Update Profile</a>
+            <a href="#" onclick="deactivateAccount()">Deactivate Account</a>
+            <a href="#" onclick="reactivateAccount()">Reactivate Account</a>
+            <a href="#" onclick="deleteAccount()">Delete Account</a>
+            <a href="#" onclick="logout()">Logout</a>
+        </div>
+    
+        <div id="main-content">
+            <!-- Profile Section -->
+            <div id="profile-section" style="display: block;">
+                <h2>User Profile</h2>
+                <p><strong>Username:</strong> <span id="profile-username"></span></p>
+                <p><strong>Email:</strong> <span id="profile-email"></span></p>
+                <div class="message" id="profile-message"></div>
+            </div>
+            <!-- Update Profile Section -->
+            <div id="update-profile-section" style="display: none;">
+                <h2>Update Profile</h2>
+                <label for="update-username">Username</label>
+                <input type="text" id="update-username" placeholder="Enter new username" required>
+                <label for="update-email">Email</label>
+                <input type="email" id="update-email" placeholder="Enter new email" required>
+                <button id="update-profile-btn">Update Profile</button>
+                <div class="message" id="update-message"></div>
+            </div>
+
+           <!-- Create Post Section -->
+<div class="post-form">
+    <textarea id="postContent" placeholder="What's on your mind?" required></textarea>
+    <input type="file" id="media-input" multiple accept="image/*,video/*" />
+    <button id="create-post-btn">Post</button>
+
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" id="csvFile" name="file" accept=".csv" required>
+        <button type="button" onclick="uploadCSV()">Upload CSV</button>
+    </form>
+</div>
+
+            <!-- Your Posts Section -->
+            <div class="section1" id="yourPostsSection">
+                <h2>Your Posts</h2>
+                <div id="yourPostsContainer" class="post-container"></div>
+            </div>
+            <!-- Timeline Posts Section -->
+            <div class="section1" id="timelinePostsSection">
+                <h2>Timeline</h2>
+                <div id="timelinePostsContainer" class="post-container"></div>
+            </div>
+
+<!-- CHAT CONTAINER -->
+<div id="chat-icon" aria-label="Chat with us" onclick="toggleChat()">
+    <img src="chat.png" alt="Chat Icon" />
+</div>
+
+<div id="chat-container" style="display: none;">
+    <h2>ChatBot</h2>
+    <div id="room-section">
+        <input type="text" id="room-input" placeholder="Enter room name" aria-label="Room name">
+        <button id="join-button" aria-label="Join room">Join Room</button>
+    </div>
+    <div id="message-section">
+        <div id="messages"></div>
+        <input type="text" id="message-input" placeholder="Type a message" maxlength="200" aria-label="Message input">
+        <button id="send-button" aria-label="Send message">Send</button>
+        <div id="typing-indicator"></div>
+    </div>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="script.js"></script> 
+</body>
+<!-- <footer class="footer">
+    <h4>© 2024 LinkOn Pvt Ltd. All rights reserved.</h4>
+</footer> -->
+</html>
